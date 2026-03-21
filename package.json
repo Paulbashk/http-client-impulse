@@ -1,0 +1,23 @@
+{
+  "name": "http-client-impulse",
+  "version": "1.0.0",
+  "description": "A package for implementing HTTP requests in JavaScript",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc & node dist/index.js",
+    "build": "tsc",
+    "test": "tsc & node --test dist/tests/index.test.js",
+    "prepublishOnly": "npm run test",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0"
+  },
+  "dependencies": {
+    "nock": "^14.0.11"
+  }
+}

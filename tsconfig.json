@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "target": "ES2024",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "esModuleInterop": true,
+    "strict": true
+  },
+  "includes": ["./src/index.js"]
+}
