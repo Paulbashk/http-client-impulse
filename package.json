@@ -1,12 +1,22 @@
 {
   "name": "http-client-impulse",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A package for implementing HTTP requests in JavaScript",
   "license": "ISC",
-  "author": "",
+  "author": "PaulBash",
+  "keywords": ["http", "get", "post", "put", "delete", "http client", "client"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paulbashk?tab=repositories"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "tsc & node dist/index.js",
     "build": "tsc",
