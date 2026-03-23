@@ -1,6 +1,6 @@
 {
   "name": "http-client-impulse",
-  "version": "1.0.5-b",
+  "version": "1.0.5-c",
   "description": "A package for implementing HTTP requests in JavaScript",
   "license": "ISC",
   "author": "PaulBash",
