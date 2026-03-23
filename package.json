@@ -1,5 +1,5 @@
 {
-  "name": "http-client-impulse",
+  "name": "@paulbashk/http-client-impulse",
   "version": "1.0.3",
   "description": "A package for implementing HTTP requests in JavaScript",
   "license": "ISC",
