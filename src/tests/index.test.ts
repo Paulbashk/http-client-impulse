@@ -4,7 +4,7 @@ import create from '../index.js'
 import nock from 'nock'
 
 describe('CONFIG CREATE', () => {
-    test('Проверка верной конкатинации baseURL + URL', async (t) => {
+    test('Проверка верной конкатинации baseURL + URL', async () => {
         const baseURL = 'http://localhost:3000/api/'
         const url = 'users'
         const expectedUrl = new URL(url, baseURL)
@@ -16,8 +16,6 @@ describe('CONFIG CREATE', () => {
         const impulse = create({ baseURL })
 
         const response = await impulse.get(url)
-        
-        //t.diagnostic(response.url)
 
         assert.strictEqual(response.url, expectedUrl.toString())
         assert.ok(mock.isDone())

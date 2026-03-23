@@ -3,6 +3,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "compilerOptions": {
+    "types": ["node"],
     "declaration": true,
     "outDir": "./dist",
     "rootDir": "./src",
