@@ -10,7 +10,7 @@ import type {
   HttpDeleteOptions,
 } from "./index.types.d.ts"
 
-// проверка на url
+// проверка на url 
 function isUrl(url: unknown): url is ImpulseURL {
   if(typeof url === 'string') {
     return true
