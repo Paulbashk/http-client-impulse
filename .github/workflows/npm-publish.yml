@@ -13,18 +13,18 @@ jobs:
         with:
           node-version: 22
       - run: npm ci
-      - run: npm pack --dry-run
+      - run: npm run build
 
-publish-npm:
-  needs: build
-  runs-on: ubuntu-latest
-  steeps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 22
-        registry-url: https://registry.npmjs.org/
-    - run: npm ci
-    - run: npm publish --access public
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steeps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
